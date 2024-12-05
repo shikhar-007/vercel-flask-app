@@ -14,6 +14,9 @@ app = Flask(__name__)
 
 print(os.listdir(os.getcwd()))
 
+# MongoDB connection
+app.config["MONGO_URI"] = "mongodb+srv://shikhar-admin:admin-12@cluster0.yv07f.mongodb.net/"
+mongo = PyMongo(app)
 
 @app.route('/')
 def home():
